@@ -7,5 +7,5 @@ LSTM + CNN enconder/decoder architecture is used.
 
 Core Components:
 1. Model is going to be trained on MS COCO dataset https://cocodataset.org/#home.
-2. h2o.ai Wave framework is used for the application layer
-3. PyTorch is used for the NN Architecture
+2. h2o.ai Wave framework is used for the application layer https://wave.h2o.ai/
+3. PyTorch is used for the NN Architecture https://pytorch.org/
