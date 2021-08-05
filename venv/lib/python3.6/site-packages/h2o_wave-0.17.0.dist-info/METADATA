@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: h2o-wave
+Version: 0.17.0
+Summary: Python driver for H2O Wave Realtime Apps
+Home-page: https://h2o.ai/products/h2o-wave
+Author: Prithvi Prabhu
+Author-email: prithvi@h2o.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.6.1
+Requires-Dist: Click
+Requires-Dist: httpx (==0.16.1)
+Requires-Dist: starlette (==0.13.8)
+Requires-Dist: uvicorn (==0.12.2)
+Provides-Extra: ml
+Requires-Dist: h2o-wave-ml ; extra == 'ml'
+
+H2O Wave
+========
+
+H2O Wave is a lightweight software stack for programming interactive web applications
+entirely in Python (no HTML/Javascript/CSS required).
+
+It is designed to make it fast, fun and easy to build low-latency, realtime,
+collaborative, web-based applications. It ships batteries-included with
+a suite of form and data visualization components for rapidly prototyping
+analytical and decision-support applications.
+
+Wave's components work in conjunction with the Wave relay server that facilitates
+realtime state synchronization between Python and web browsers.
+
+
+Installing
+----------
+
+Install and update using `pip`_:
+
+.. code-block:: text
+
+    pip install -U h2o-wave
+
+
+Hello world
+----------------
+
+``hello.py``:
+
+.. code-block:: python
+
+    from h2o_wave import site, ui
+
+    # Access the web page at http://localhost:10101/demo
+    page = site['/demo']
+
+    # Add some content.
+    page['example'] = ui.markdown_card(
+      box='1 1 2 2',
+      title='Hello World!',
+      content='And now for something completely different.',
+    )
+
+    # Save the page
+    page.save()
+
+Run ``hello.py``:
+
+.. code-block:: text
+
+    $ python hello.py
+
+
+Links
+-----
+
+* Website: https://wave.h2o.ai/
+* Releases: https://pypi.org/project/h2o-wave/
+* Code: https://github.com/h2oai/wave
+* Issue tracker: https://github.com/h2oai/wave/issues
+
+.. _pip: https://pip.pypa.io/en/stable/quickstart/
+
+
+

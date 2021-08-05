@@ -1,0 +1,5 @@
+h2o_wave==3.17.8
+pandas
+numpy
+sklearn
+pytorch
