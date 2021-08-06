@@ -9,6 +9,7 @@ from PIL import Image
 
 print('Imports Succesfull')
 
+# resize image for a more optimized display in the browser
 def resize_img(img_path: str) -> None:
     """
     Resize images but not cropp. 

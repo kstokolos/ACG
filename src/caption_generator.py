@@ -6,7 +6,6 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import pickle
 from torchvision import transforms
 import numpy as np
-import matplotlib.pyplot as plt
 from PIL import Image
 print('Imports Succesfull')
 
@@ -75,7 +74,6 @@ def generate_captions(image_path: str,
 
     # Load image
     PIL_image = Image.open(image_path).convert('RGB')
-    # PIL_image = Image.open('./static/london_parking.jpeg').convert('RGB')
     orig_image = np.array(PIL_image)
     image = transformer(PIL_image)
 
