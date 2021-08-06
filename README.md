@@ -3,9 +3,9 @@
 This application allwos you to get captions automatically generated for uploaded images.
 
 ## Running this App Locally
-New to H2O Wave? We recommend starting in the documentation to [download and run](https://wave.h2o.ai/docs/installation) the Wave Server on your local machine. Once the server is up and running you can easily use any Wave app. 
 
 ### 1. Run the Wave Server
+New to H2O Wave? We recommend starting in the documentation to [download and run](https://wave.h2o.ai/docs/installation) the Wave Server on your local machine. Once the server is up and running you can easily use any Wave app. 
 
 ### 2. Setup Python Virtual Environment
 
