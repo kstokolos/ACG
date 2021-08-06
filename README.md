@@ -2,6 +2,8 @@
 
 This application allwos you to get captions automatically generated for uploaded images.
 
+![Automated Cpation Generator Screenshot - Init](static/app_init_image.png)
+![Automated Caption Generator Screenshot - Done](static/app_done_image.png)
 ## Running this App Locally
 
 ### 1. Run the Wave Server
