@@ -8,8 +8,8 @@ venv:
 
 .PHONY: setup
 setup: | venv ## Setup a project
-		./venv/bin/python -m pip install -U pip
-		./venv/bin/python -m pip install -r requirements.txt
+		./venv/bin/python3 -m pip install -U pip
+		./venv/bin/python3 -m pip install -r requirements.txt
 
 .PHONY: run
 run: ## run the app (run 'make setup' first)

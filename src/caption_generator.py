@@ -1,6 +1,6 @@
 import os
 from typing import Callable
-from model import EncoderCNN, DecoderRNN
+from .model import EncoderCNN, DecoderRNN
 import torch
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 import pickle
@@ -10,7 +10,7 @@ from PIL import Image
 print('Imports Succesfull')
 
 
-VOCABULARY_FILE = "../vocab.pickle"
+VOCABULARY_FILE = "vocab.pickle"
 ENCODER_FILE = "encoder-3.pkl"
 DECODER_FILE = "decoder-3.pkl"
 EMBED_SIZE = 256
@@ -23,7 +23,7 @@ def setup_ml():
     Set up all the imports and objects required for captions generation
     """
     # load vocabulary
-    vocab = open(f"./{VOCABULARY_FILE}", "rb")
+    vocab = open(f"{VOCABULARY_FILE}", "rb")
     vocab = pickle.load(vocab)
 
     # transformer to preprocess images
@@ -44,7 +44,7 @@ def setup_ml():
     # load encoder
     encoder.load_state_dict(
         torch.load(
-            os.path.join('../models', ENCODER_FILE),
+            os.path.join('./models', ENCODER_FILE),
             map_location=torch.device('cpu')
         )
     )
@@ -52,7 +52,7 @@ def setup_ml():
     # load decoder
     decoder.load_state_dict(
         torch.load(
-            os.path.join('../models', DECODER_FILE),
+            os.path.join('./models', DECODER_FILE),
             map_location=torch.device('cpu')
         )
     )

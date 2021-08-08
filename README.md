@@ -4,9 +4,11 @@ This application allwos you to get captions automatically generated for uploaded
 
 ![Automated Cpation Generator Screenshot - Init](static/app_init_image.png)
 ![Automated Caption Generator Screenshot - Done](static/app_done_image.png)
+
 ## Running this App Locally
 
 ### 1. Run the Wave Server
+
 New to H2O Wave? We recommend starting in the documentation to [download and run](https://wave.h2o.ai/docs/installation) the Wave Server on your local machine. Once the server is up and running you can easily use any Wave app. 
 
 ### 2. Setup Python Virtual Environment
@@ -18,14 +20,17 @@ make setup
 ```
 
 ### 3. Run the App
+
 ```bash
 make run
 ```
 
 ### 4. View the App
+
 Point your favorite web browser to [localhost:10101](http://localhost:10101)
 
 ## Running this App in H2O AI Hybrid Cloud
+
 Coming Soon..
 
 ## Details about Architecture and Tools used for creating Automated Caption Generator
@@ -38,13 +43,11 @@ Coming Soon..
     generated for. Scoring is done on the backend and doesn't involve any manual 
     code tweaking / running. 
 
-
 ### Training Dataset
 
     COCO dataset (Common Objects in Context) is data that the model is trained on. This dataset
     maps images to captions describing what is on those images. Each image has about 5 captions
     on average. https://cocodataset.org/#home
-
 
 ### CNN
 
@@ -52,7 +55,6 @@ Coming Soon..
     image processing. Main idea is that the image is taken through multiple layers of the network,
     thorough which feature set is exatracted. At the end layer feature object is flattened and can 
     be fed into final classification layer or be combined with other layers.
-
 
 ### RNN
 

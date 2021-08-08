@@ -1,4 +1,5 @@
 h2o_wave<1.0
 numpy
 torch
+torchvision
 

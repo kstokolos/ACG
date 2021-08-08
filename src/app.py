@@ -2,8 +2,8 @@
 from h2o_wave import Q, ui, main, app
 
 # user scripts
-from model import EncoderCNN, DecoderRNN
-from caption_generator import setup_ml, generate_captions
+from .model import EncoderCNN, DecoderRNN
+from .caption_generator import setup_ml, generate_captions
 import os
 from PIL import Image
 
@@ -137,7 +137,7 @@ async def serve(q: Q) -> None:
     """
 
     # # upload default image
-    default_image_path, = await q.site.upload(['../static/default_image.jpeg'])   
+    default_image_path, = await q.site.upload(['./static/default_image.jpeg'])   
     print("\n-- ACG app started. Handling a user event..\n\n")
 
     if not q.client.initialized:
